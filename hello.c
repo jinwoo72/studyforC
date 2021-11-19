@@ -2,17 +2,18 @@
 
 int main(void)
 {
-	int a=0;
+	int num;
+	int total=0;
 	
-	while(a<5){
-		int b = 0;
-		while(b<a){
-			printf("o");
-			b++;
-		}
-		printf("*\n");
-		a++;
-	}
+	do
+	{
+		printf("정수 입력 : ");
+		scanf("%d", &num);
+		total += num;
+	} while(num != 0);
+	
+	printf("total : %d", total);
+
 	
 	
 
