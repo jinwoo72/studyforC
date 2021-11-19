@@ -2,21 +2,20 @@
 
 int main(void)
 {
-	int num;
-	int total=0;
+	int i;
+	for(i = 1;i<100;i++){
+		if(i%7 == 0){
+			printf("%d\n", i);
+		}
+		else if(i%9 == 0){
+			printf("%d\n", i);
+		}
+		
+		else if(i%7 == 0 && i%9 == 0){
+		printf("%d\n", i);
+	}
+	}
 	
-	do
-	{
-		printf("정수 입력 : ");
-		scanf("%d", &num);
-		total += num;
-	} while(num != 0);
 	
-	printf("total : %d", total);
-
-	
-	
-
-
 	return 0;
 }
