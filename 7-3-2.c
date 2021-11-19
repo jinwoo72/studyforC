@@ -2,18 +2,16 @@
 
 int main(void)
 {
-	int i = 0;
+	int i, num;
 	int total = 0;
+	printf("0부터 num까지의 덧셈, num입력 : "); 
+	scanf("%d", &num);
+
 	
-	do
-	{
-		if(i%2 == 0){
-			total += i;
-		}
-		i++;
-	}while(i<=100);
-	
-	printf("%d", total);
+	for(i = 0; i<=num; i++){
+		total += i;
+	}
+	printf("total : %d", total);
 	
 	return 0;
 }
