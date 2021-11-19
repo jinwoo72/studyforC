@@ -2,23 +2,20 @@
 
 int main(void)
 {
-	int num;
-	int i = 0;
-	int total = 0;
-	while(i<5){
-		scanf("%d", &num);
-		while(num<1){
-		printf("다시 입력해주세요.\n");
-		scanf("%d", &num);
+	int a=0;
+	
+	while(a<5){
+		int b = 0;
+		while(b<a){
+			printf("o");
+			b++;
 		}
-		i++;
-		total += num;
+		printf("*\n");
+		a++;
 	}
-	printf("%d", total);
+	
+	
 
-	
-	
-	
-	
+
 	return 0;
 }
