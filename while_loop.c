@@ -1,29 +1,34 @@
 #include <stdio.h>
-
-
-int numComp(int num1, int num2);// 크기를 비교하는 함수 
-int getAbs(int num); // 절댓값 반환하는 함수 
+int FiboProgress(int num);
 
 int main(void)
 {
-	int num1, num2;
-	int result;
-	printf("두 정수 입력: ");
-	scanf("%d %d", &num1, &num2);
-	printf("%d와 %d 중 큰 수의 절댓값 : %d", num1, num2, numComp(num1, num2));
+	int num;
+	printf("정수 입력: ");
+	scanf("%d", &num);
+	if(num<=0){
+		printf("양의 정수만 입력!\n");
+		return -1; 
+	}
+	FiboProgression(num);
 	return 0;
 }
-int numComp(int num1, int num2){
-	if(getAbs(num1)>getAbs(num2)){
-		return num1;
+
+int FiboProgression(int num){
+	
+	int f1 = 0, f2 = 1, f3, i; 
+	if(num == 1){
+		printf("%d ", f1);
 	} else{
-		return num2;
+		printf("%d %d ", f1, f2);
 	}
-}
-int getAbs(int num){
-	if(num>=0){
-		return num;
-	} else{
-		return num*(-1);
+	
+	for(i = 0;i<num-2;i++){
+		f3 = f1 + f2;
+		printf("%d ", f3);
+		f1 = f2;
+		f2 = f3;
 	}
+	
 }
+
